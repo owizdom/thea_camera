@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Thea Camera App</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QGroupBox" name="cameraGroup">
+      <property name="title">
+       <string>Camera View</string>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>600</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="cameraLayout">
+       <item>
+        <widget class="QScrollArea" name="cameraScrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>798</width>
+            <height>598</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="scrollLayout">
+           <item>
+            <widget class="QLabel" name="cameraLabel">
+             <property name="text">
+              <string>Camera Feed</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>800</width>
+               <height>600</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel { background-color: black; color: white; font-size: 18px; }</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="controlGroup">
+      <property name="title">
+       <string>Camera Controls</string>
+      </property>
+      <layout class="QHBoxLayout" name="controlLayout">
+       <item>
+        <widget class="QComboBox" name="modeCombo">
+         <item>
+          <property name="text">
+           <string>Photo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Portrait</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Wide Portrait</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Video</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="startStopButton">
+         <property name="text">
+          <string>Start Camera</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton { background-color: #4CAF50; color: white; font-weight: bold; padding: 8px; }</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="captureButton">
+         <property name="text">
+          <string>Capture Photo</string>
+         </property>
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton { background-color: #2196F3; color: white; font-weight: bold; padding: 8px; }</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="recordButton">
+         <property name="text">
+          <string>Start Recording</string>
+         </property>
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton { background-color: #F44336; color: white; font-weight: bold; padding: 8px; }</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="settingsGroup">
+      <property name="title">
+       <string>Camera Settings</string>
+      </property>
+      <layout class="QGridLayout" name="settingsLayout">
+       <item row="0" column="0">
+        <widget class="QLabel">
+         <property name="text">
+          <string>Resolution:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="resolutionCombo">
+         <item>
+          <property name="text">
+           <string>800x600</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1280x720</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1920x1080</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1000x500 (Wide)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel">
+         <property name="text">
+           <string>FPS:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="fpsSpinBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>60</number>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel">
+         <property name="text">
+          <string>Quality:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSlider" name="qualitySlider">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>95</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="qualityLabel">
+         <property name="text">
+          <string>95%</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QCheckBox" name="wideModeCheck">
+         <property name="text">
+          <string>Wide Mode</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="statusGroup">
+      <property name="title">
+       <string>Status &amp; Information</string>
+      </property>
+      <layout class="QVBoxLayout" name="statusLayout">
+       <item>
+        <widget class="QTextEdit" name="statusText">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="recordingProgress">
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="visible">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionStartCamera"/>
+    <addaction name="actionStopCamera"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="cameraMenu">
+    <property name="title">
+     <string>&amp;Camera</string>
+    </property>
+    <addaction name="actionCapturePhoto"/>
+    <addaction name="actionStartRecording"/>
+    <addaction name="actionStopRecording"/>
+   </widget>
+   <widget class="QMenu" name="settingsMenu">
+    <property name="title">
+     <string>&amp;Settings</string>
+    </property>
+    <addaction name="actionOpenSettings"/>
+   </widget>
+   <widget class="QMenu" name="helpMenu">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="cameraMenu"/>
+   <addaction name="settingsMenu"/>
+   <addaction name="helpMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionStartCamera">
+   <property name="text">
+    <string>&amp;Start Camera</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionStopCamera">
+   <property name="text">
+    <string>&amp;Stop Camera</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCapturePhoto">
+   <property name="text">
+    <string>&amp;Capture Photo</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="actionStartRecording">
+   <property name="text">
+    <string>Start &amp;Recording</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionStopRecording">
+   <property name="text">
+    <string>Stop &amp;Recording</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="actionOpenSettings">
+   <property name="text">
+    <string>&amp;Open Settings</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

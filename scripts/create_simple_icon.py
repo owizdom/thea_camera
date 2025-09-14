@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""
+Create a simple app icon for Thea Camera using basic drawing
+"""
+
+import os
+
+def create_icon_svg():
+    """Create an SVG icon that can be converted to PNG"""
+    svg_content = '''<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="#2D2D2D" stroke="#1A1A1A" stroke-width="8"/>
+  
+  <!-- Camera body -->
+  <rect x="120" y="180" width="272" height="152" rx="20" fill="#404040"/>
+  
+  <!-- Camera lens -->
+  <circle cx="256" cy="256" r="80" fill="#1A1A1A"/>
+  <circle cx="256" cy="256" r="60" fill="#606060"/>
+  <circle cx="256" cy="256" r="40" fill="#808080"/>
+  
+  <!-- Flash -->
+  <rect x="320" y="200" width="24" height="16" rx="4" fill="#FFFFFF"/>
+  
+  <!-- "T" letter -->
+  <text x="256" y="280" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+        text-anchor="middle" fill="#FFFFFF">T</text>
+  
+  <!-- Camera strap attachment -->
+  <rect x="140" y="160" width="20" height="40" rx="10" fill="#2D2D2D"/>
+  <rect x="352" y="160" width="20" height="40" rx="10" fill="#2D2D2D"/>
+</svg>'''
+    
+    with open('thea_camera_icon.svg', 'w') as f:
+        f.write(svg_content)
+    print("Created thea_camera_icon.svg")
+
+if __name__ == "__main__":
+    create_icon_svg()

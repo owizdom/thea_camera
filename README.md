@@ -2,6 +2,10 @@
 
 A professional camera application written in C++ with Qt5 and OpenCV, featuring advanced camera functionality with horizontal matrix layout for wider photos and video recording capabilities. Inspired by the [Qt and OpenCV camera app](https://github.com/AhmetFurkanDEMIR/Camera-app-with-Qt-and-Opencv) design.
 
+## iPhone 17-Inspired Horizontal Matrix Layout
+
+Thea Camera's flagship feature is its revolutionary **horizontal matrix layout** technology, inspired by the cutting-edge camera innovations found in the iPhone 17. This advanced feature transforms traditional camera capture by implementing a sophisticated matrix-based approach that creates dramatically wider photos while maintaining exceptional image quality. The horizontal matrix layout intelligently processes multiple image segments in real-time, stitching them together to produce panoramic-style photos that capture significantly more of your scene in a single shot. This technology represents the future of mobile photography, bringing professional-grade wide-angle capabilities to desktop applications with unprecedented precision and speed.
+
 ## Features
 
 - **Real camera access** - Uses OpenCV for direct camera hardware access
